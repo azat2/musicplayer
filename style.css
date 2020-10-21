@@ -1,5 +1,5 @@
 /* Images created by: https://unsplash.com/@lightcircle  and https://unsplash.com/@mihaiteslariu0*/
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
 
 
 html {
@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Krona One,sans-serif;
+  font-family: Spartan, sans-serif;
   font-size: 12px;
 }
 
@@ -83,7 +83,7 @@ h3 {
 /* Controls */
 .player-controls {
   position: relative;
-  top: -15px;
+  top: -20px;
   left: 120px;
   width: 200px;
 }
@@ -92,10 +92,13 @@ h3 {
   font-size: 30px;
   color: rgb(129, 129, 129);
   margin-right: 30px;
-
+  cursor: pointer;
+  user-select: none;
 }
 
-
+.fas:hover {
+  filter: brightness(80%);
+}
 
 .main-button {
   font-size: 40px;
