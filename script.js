@@ -94,8 +94,8 @@ function updateProgressBar(e) {
         progress.style.width = `${progressPercent}%`;
         
         // Calculate display for duration
-        const durationMinutes = Math.floor(duration/60);
-        let durationSeconds = Math.floor(duration%60);
+        const durationMinutes = Math.floor(duration / 60);
+        let durationSeconds = Math.floor(duration % 60);
 
         if (durationSeconds < 10){
             durationSeconds = `0${durationSeconds}`
@@ -117,6 +117,14 @@ function updateProgressBar(e) {
     }
 }
 
+// Set Progress Bar
+function setProgressBar(e) {
+    const width = this.clientWidth;
+    const clickPos = e.offsetX;
+    const { duration } = music;
+    music.currentTime = (clickPos / width) * duration;
+}
+
 // On Load - Select First Song
 loadSong(songs[songIndex]);
 
@@ -125,3 +133,5 @@ playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
+progressContainer.addEventListener('click', setProgressBar);
+music.addEventListener('ended', nextSong);
