@@ -1,14 +1,14 @@
 // Declare dynamic elements
 const image = document.querySelector('img');
-const title = document.getElementById('title');
-const artist = document.getElementById('artist');
 const music = document.querySelector('audio');
-const progressContainer = document.getElementById('progress-container');
-const currentTimeEl = document.getElementById('current-time');
-const durationEl = document.getElementById('duration');
+const title = document.getElementById('title');
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
+const artist = document.getElementById('artist');
+const durationEl = document.getElementById('duration');
+const currentTimeEl = document.getElementById('current-time');
+const progressContainer = document.getElementById('progress-container');
 
 // Music
 const songs = [
